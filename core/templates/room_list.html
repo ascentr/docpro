@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block header %}
+<title>Room List</title>
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+
+    <div class="marg10">
+        <h2>Room List</h2>
+        <table border=1>
+            {% for room in rooms  %}
+            <tr><td> <h2> {{ room.room_type }}  </h2> {{  room.room_size }}  </td> <td>{{  room.project}}</td></tr>
+            <tr><td> 
+              <img src='{{ room.img.url }}' alt="no image found"> </td>    </tr>
+              <tr><td>{{ room.pic1.url }}</td></tr>
+
+            {% endfor %}
+
+        </table>
+    </div>
+
+<div>
+
+</div>
+
+
+
+
+</div>
+{% endblock %}

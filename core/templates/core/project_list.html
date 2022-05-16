@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block header %}
+<title>Project List</title>
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+
+    <div class="marg10">
+        <h2>Project  List</h2>
+
+        <ol>
+            {% for project in projects %}
+            <h4><li>
+                <a href="{{ project.id }}">{{project.name}}</a></li>
+                {{project.post_code}} &nbsp; &nbsp; {{ project.add1}}<br>
+                {{ project.contact }} 
+            </h4>
+            {% endfor %}
+        </ol>
+
+
+    </div>
+
+<div>
+
+</div>
+
+
+
+
+</div>
+{% endblock %}

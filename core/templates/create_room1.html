@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block header %}
+<title>Create Room</title>
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {% bootstrap_form form %}
+
+            <button type="submit" class="btn btn-primary"> SAVE</button>      
+        </form> 
+    </div>
+
+
+
+</div>
+{% endblock %}
+
+<!--
+    <div class="form-group">
+        <label for="id_project">Project</label>
+        <select name="project" class="form-control" title="" id="id_project">
+            <option value="1">example1</option>
+            <option value="3">Sample3</option>
+            <option value="4">Sample4</option>
+            <option value="5">Sample5</option>
+            <option value="7">Project 6</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="id_total">Total</label>
+        <input type="number" name="total" class="form-control" placeholder="Total" title="" required id="id_total">
+    </div>
+    <div class="form-group"><label for="id_room_type">Room type</label>
+        <input type="text" name="room_type" maxlength="50" class="form-control" placeholder="Room type" title="" required id="id_room_type">
+    </div>
+    <div class="form-group">
+        <label for="id_room_size">Room size</label>
+        <input type="text" name="room_size" maxlength="50" class="form-control" placeholder="Room size" title="" required id="id_room_size">
+    </div>
+    <div class="form-group"><label for="id_img">Img</label>
+        <div class="row bootstrap4-multi-input">
+            <div class="col-12">
+                <input type="file" name="img" accept="image/*" class="" title="" id="id_img">
+            </div>
+        </div>
+    </div>
+-->

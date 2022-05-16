@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block header %}
+<title>Project Home Page</title>
+{% endblock  %}
+
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+
+        <div  class="col-lg-4 offset-lg-2">
+            <div class="col pad20">
+                <div class="marg10">
+                    <a href="{% url 'createproject' %}">
+                        <button type="button" class="btn btn-success btn-lg btn-block">Start Job</button>
+                    </a>
+                </div>
+                <div class="marg10">
+                    <a href="{% url 'projectlist' %}">
+                        <button type="button" class="btn btn-info btn-lg btn-block">View Ongoing Jobs</button>
+                    </a>
+                </div>
+                <div class="marg10">
+                    <button type="button" class="btn btn-info btn-lg btn-block">View completed Jobs</button>
+                </div>
+            </div>
+        </div>
+        <div  class="col-lg-4">
+            <div class="col pad20">
+                <div class="marg10">
+                    <a href="{% url 'createroom' %}">
+                        <button type="button" class="btn btn-success btn-lg btn-block">Add Room</button>
+                    </a>
+                </div>
+                <div class="marg10">
+                    <a href="{% url 'roomlist' %}">
+                        <button type="button" class="btn btn-info btn-lg btn-block">View Rooms</button>
+                    </a>
+                </div>
+                <div class="marg10">
+                    <button type="button" class="btn btn-info btn-lg btn-block">View completed Jobs</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+{% endblock  %}

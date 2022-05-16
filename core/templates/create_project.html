@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block header %}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"
+  integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"
+  integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+
+<title>Create Project</title>
+{% endblock  %}
+
+{% block content %}
+
+<div class="container">
+
+  <div>
+    <h2>Create Project</h2>
+  </div>
+
+  <div class="form-group">
+      <form method="post">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
+  </div>
+
+
+{% endblock %}
+{% block js %}
+
+<script>
+  $(function () {
+      $("#id_start_date").datepicker({
+        format: 'yyyy-mm-dd',
+      });
+    });
+</script>
+
+{% endblock %}

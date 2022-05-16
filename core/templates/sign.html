@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block header %}
+<title>Create Room</title>
+{% endblock  %}
+
+{% block content %}
+<div class="col pad20">
+
+    <div class="marg10">
+        <h2>Accept Signature</h2>
+    </div>
+
+    <div>
+
+        <form method="post" enctype="multipart/form-data"></form>
+        <div id="canvas">
+            <canvas class="roundCorners" id="newSignature"style="position: relative; margin: 0; padding: 0; border: 1px solid #c4caac;">
+            </canvas>
+        </div>
+
+
+          <img id="saveSignature" alt="Saved image png"/>
+
+
+
+            {% csrf_token %}
+            {{ form.signature}}
+
+            <button type="button" onclick="signatureSave()">Save signature</button>
+            <button type="button" onclick="signatureClear()">Clear signature</button>
+            <button type="submit" class="btn btn-primary" onclick="signatureSave()" > SAVE</button>      
+        </form> 
+
+    </div>
+
+</div>
+<script src="{% static 'js/signature.js' %}"></script>
+<script>  signatureCapture()</script>
+{% endblock %}

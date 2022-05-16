@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block header %}
+<title>Project Detail</title>
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+
+  <div class="jumbotron marg20">
+    <h2><u>Project Details </u></h2>
+    <p>Project Name : {{ project_details.name }}</p>
+    <p>Contact: {{ project_details.contact}}</p>
+    <p>Post Code: {{ project_details.post_code }}</p>
+    <p>Address: {{ project_details.add1 }} &nbsp; &nbsp; {{ project_details.add2  }}</p>
+    <p>Telephone: {{ project_details.tel }}&nbsp; &nbsp; {{ project_details.email  }}</p>
+    <p>Primary Key : {{project_details.pk}}</p>
+
+    <h3><u>Rooms:</u></h3>
+
+    {% for room in project_details.rooms.all %}
+
+      <p>Project : {{  room.project }}</p>
+      <p>Total Rooms: {{ room.total }} </p>
+      <p>Room Type: {{ room.room_type }} &nbsp; &nbsp; size:{{ room.room_size }}</p>
+      <p><img src='{{ room.img.url }}' alt="no image found"></p>
+<hr>
+    {% endfor %}
+  </div>
+  <div>
+    <span><a class='btn btn-warning' href="{% url 'update' pk=project_details.pk %}">Update</a></span>
+    <span><a class='btn btn-danger' href="{% url 'delete' pk=project_details.pk    %}">Delete Project</a><span>
+
+
+  </div>
+
+</div>
+{% endblock %}
