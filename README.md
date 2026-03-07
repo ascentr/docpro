@@ -24,7 +24,7 @@ This provides a simple way to **document work progress and confirm when and wher
 
 ## Features
 
-* Create and manage renovation projects
+* Create and manage renovation or construction projects
 * Add tasks to projects (e.g., individual rooms)
 * Upload photos for each task
 * Automatic **timestamping of uploaded images**
@@ -54,8 +54,8 @@ This helps provide **basic authenticity verification** for site photos.
 
 ### Backend
 
-* Python 3.12
-* Django 4
+* Python 3.10
+* Django 4.2
 * SQLite (demo database)
 
 ### Frontend

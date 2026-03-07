@@ -1,0 +1,55 @@
+{% extends "base.html" %}{% load static %}{% load bootstrap5 %}
+{% block header %}
+  <title> Create New Project </title>
+{% endblock %}
+
+{% block  content %}
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 d-flex flex-direction-row  mt-3">
+      <h3>Update Room</h3>
+    </div>
+    <div class="col-2"></div>
+  </div>  
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="my-3 d-flex flex-direction-row">
+        <div class="d-flex w-20">Project :</div>
+        <div class="w-60"><h5> {{project}} - {{project.post_code}}</h5></div>
+        <div class="2-20"> Update {{ room.room_type }} </div>
+      </div>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% for field in form %}
+          {% if field.name == "photo" and room.photo %}
+          <a href="{{room.photo.url}}">
+            <img
+              src="{{ room.photo.url }}"
+              width="150"
+              height="auto"
+              alt="{{ room.room_type }}"
+              class="rounded border"
+            >
+          </a>
+          {% endif %}
+          <div class="mb-3">
+            {{field.label}}
+            {{field}}
+            {{field.errors}}
+          </div>
+        {% endfor %}
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-lg btn-outline-success">
+            Update Room Details
+          </button>
+        </div>
+      </form>
+    </div> <!--col-8 end-->
+    <div class="col-2"></div>
+  </div>  <!--row end-->
+</div>    <!--container end-->
+{% endblock  %}

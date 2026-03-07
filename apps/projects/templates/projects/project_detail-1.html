@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% load static %}{% load bootstrap5 %}
+{% block header %}
+  <title> Project List </title>
+{% endblock %}
+
+{% block  content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8 d-flex flex-column justify-content-start mt-3">
+        <h1>Project Detail</h1>
+        <h3>{{project.rooms.count}}
+        <div>{{ project.name }}</div>
+        <div>{{ project.add1 }}</div>
+        <div>{{ project.add2 }}</div>
+        <div>{{ project.postcode }}</div>
+        <div>
+          <a href="{% url 'update' project.id %}">  
+          <button class="btn btn-warning btn-lg">Edit</button> </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+{% endblock  %}

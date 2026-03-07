@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% load static %}{% load bootstrap5 %}
+{% block header %}
+  <title> Create New Project </title>
+{% endblock %}
+
+{% block  content %}
+  <div class="container mt-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white d-flex flex-direction-row justify-content-center p-3">
+        {% if object %}
+          <h2>Update Project</h2>
+        {% else %}
+          <h2>Create Project </h2>
+        {% endif %}
+      </div>
+      <div class="card-body">
+        <div class="row d-flex flex-row justify-content-center align-items-center">
+          <div class="col-md-6  d-flex flex-row justify-content-center">
+            <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+              <div class="mb-3">
+                {{field.label}}
+                {{field}}
+                {{field.errors}}
+              </div>
+            {% endfor %}
+              <button type="submit" class="btn btn-outline-success mb-5">Save and Continue</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  <!--container end-->
+{% endblock  %}

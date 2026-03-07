@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}{% load bootstrap5 %}
+{% block header %}
+  <!-- <style>
+    .pad20{padding:20px; justify-content: center; }
+    .marg10{margin:5px 10px 5px 10px;}
+    .marg20{margin:20px 0px 20px 0px;}
+    .btndiv{width: 50vw; margin:10px 0 10px 0px; background-color: pink;}
+  </style> -->
+<title>Work Automation Demo Home Page </title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center mt-5" >
+    <div class="col-md-6 d-flex flex-column align-items-center">
+
+      <div class="p-3 w-100 text-center">
+        <a href="{% url 'createproject' %}" class="w-100">
+          <button class="btn btn-success btn-lg w-100">
+            Start New Project
+          </button>
+        </a>
+      </div>
+
+      <div class="p-3 w-100 text-center">
+        <a href="{% url 'projects' %}" class="w-100">
+          <button class="btn btn-info btn-lg w-100">
+            View All Projects
+          </button>
+        </a>
+      </div>
+
+      <div class="p-3 w-100 text-center">
+        <a href="{% url 'ongoing' %}" class="w-100">
+          <button class="btn btn-info btn-lg w-100">
+            View Ongoing Projects
+          </button>
+        </a>
+      </div>
+
+      <div class="p-3 w-100 text-center">
+        <a href="{% url 'completed' %}" class="w-100">
+          <button class="btn btn-info btn-lg w-100">
+            View Completed Projects
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
