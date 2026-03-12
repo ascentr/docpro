@@ -5,7 +5,8 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
 ![Database](https://img.shields.io/badge/Database-SQLite-lightgrey)
 
-Lightweight project tracking software for building firms with GPS-verified photo uploads.  [![Live Demo](https://img.shields.io/badge/demo-live-green)](https://demoappapp.com/)
+Lightweight project tracking software for building firms with GPS-verified photo uploads.  
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://demoappapp.com/)
 
 ---
 
