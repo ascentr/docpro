@@ -19,7 +19,9 @@ In this demo scenario, tasks represent **rooms within a property that are being 
 Each task can include an uploaded image which is automatically processed to add verification data such as timestamps and GPS location information.
 
 This provides a simple way to **document work progress and confirm when and where images were taken**.
+See demo on 
 
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://demoapp01.pythonanywhere.com/)
 ---
 
 ## Features
