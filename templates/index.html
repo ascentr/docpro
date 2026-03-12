@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% load static %}{% load bootstrap5 %}
 {% block header %}
-  <!-- <style>
-    .pad20{padding:20px; justify-content: center; }
-    .marg10{margin:5px 10px 5px 10px;}
-    .marg20{margin:20px 0px 20px 0px;}
-    .btndiv{width: 50vw; margin:10px 0 10px 0px; background-color: pink;}
-  </style> -->
 <title>Work Automation Demo Home Page </title>
 {% endblock %}
 
@@ -47,6 +41,31 @@
         </a>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center mt-5" >
+    <div class="col-md-6 d-flex flex-column align-items-center">
+      <div class="p-3 w-100 text-center">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <p class="text-start">
+              WorkTrack is a light weight demo of a construction management project deployed for a client.  
+              The system allows contractors to create projects and add individual tasks. In this demo scenario, 
+              tasks represent rooms within a property that are being renovated.
+            </p>
+            <p class="text-start">
+              Each task can include an uploaded image which is automatically processed to adds verification data 
+              such as timestamps and GPS location information. This provides a simple way to document work progress 
+              and confirm when and where images were taken.
+            </p>
+            <p class="text-start"> The user authentication has been disabled  for the demo version but full system comes with customisable
+              user authentication to allow relevent access to different users or administrators.
+            </p>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      </div>    
     </div>
   </div>
 </div>
