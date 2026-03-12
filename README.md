@@ -5,7 +5,7 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
 ![Database](https://img.shields.io/badge/Database-SQLite-lightgrey)
 
-Lightweight project tracking software for building firms with GPS-verified photo uploads.
+Lightweight project tracking software for building firms with GPS-verified photo uploads.  [![Live Demo](https://img.shields.io/badge/demo-live-green)](https://demoappapp.com/)
 
 ---
 
@@ -21,7 +21,6 @@ Each task can include an uploaded image which is automatically processed to add 
 This provides a simple way to **document work progress and confirm when and where images were taken**.
 See demo on 
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://demoapp01.pythonanywhere.com/)
 ---
 
 ## Features
